@@ -1,6 +1,6 @@
 import com.opencsv.bean.CsvBindByName;
 
-public class Paquete {
+public class Paquete implements Comparable<Paquete>{
     @CsvBindByName(column = "id_paquete")
     private String idPaquete;
 
@@ -43,5 +43,12 @@ public class Paquete {
     }
     public int getNivelUrgencia(){ 
         return nivelUrgencia; 
+    }
+
+    @Override
+    public int compareTo(Paquete p) {
+        return Double.compare(p.getPesoKg(), this.getPesoKg());
+        
+
     }
 }

@@ -31,7 +31,7 @@ public class Camion {
     public String getPatente(){
         return patente; 
     }
-    public boolean isEstaRefrigerado(){
+    public boolean esRefrigerado(){
         return estaRefrigerado; 
     }
     public double getCapacidadKg(){  
