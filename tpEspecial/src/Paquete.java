@@ -1,6 +1,6 @@
 import com.opencsv.bean.CsvBindByName;
 
-public class Paquete implements Comparable<Paquete>{
+public class Paquete{
     @CsvBindByName(column = "id_paquete")
     private String idPaquete;
 
@@ -22,6 +22,7 @@ public class Paquete implements Comparable<Paquete>{
         this.pesoKg=peso;
         this.contieneAlimentos=contieneAlimentos;
         this.nivelUrgencia=nvlUrg;
+        
     }
 
     public Paquete(){
@@ -44,11 +45,16 @@ public class Paquete implements Comparable<Paquete>{
     public int getNivelUrgencia(){ 
         return nivelUrgencia; 
     }
+    
+   @Override
+   public boolean equals(Object obj) {
+      Paquete otroPaquete = (Paquete)obj;
 
-    @Override
-    public int compareTo(Paquete p) {
-        return Double.compare(p.getPesoKg(), this.getPesoKg());
-        
-
+      return this.idPaquete.equals(otroPaquete.idPaquete);
     }
+    @Override
+    public int hashCode() {
+       return idPaquete.hashCode();
+    }
+ 
 }

@@ -1,0 +1,5 @@
+id_camion;patente;esta_refrigerado;capacidad_kg
+C1;AAA111;true;100
+C2;BBB222;false;50
+C3;SSS444;true;40
+C4;RSG454;true;100

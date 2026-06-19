@@ -1,0 +1,7 @@
+id_paquete;codigo_paquete;peso_kg;contiene_alimentos;nivel_urgencia
+P1;COD1;30;false;1
+P2;RTE2;60;true;4
+P3;JAD3;30;false;1
+P4;KER4;30;true;6
+P5;CRT5;30;true;3
+P6;HGT6;30;false;1

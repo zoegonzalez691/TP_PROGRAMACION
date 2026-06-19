@@ -37,4 +37,14 @@ public class Camion {
     public double getCapacidadKg(){  
         return capacidadKg; 
     }
+    @Override
+    public boolean equals(Object obj) {
+        Camion otroCamion = (Camion) obj;
+        return this.idCamion.equals(otroCamion.idCamion);
+    }
+
+    @Override
+    public int hashCode() {
+        return idCamion.hashCode();
+    }
 }

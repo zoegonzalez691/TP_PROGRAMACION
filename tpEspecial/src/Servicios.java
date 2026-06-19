@@ -101,6 +101,9 @@ public class Servicios {
           }//retorno la lista resultado
           return resultado;
     }
-
+    //O(1) un solo acceso para mostrar mi lista de camiones
+    public List<Camion> getCamiones() {
+       return camiones;
+    }
     
 }
