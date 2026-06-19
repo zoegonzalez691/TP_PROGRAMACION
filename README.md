@@ -7,6 +7,11 @@ Tambien ofrece los servicios para obtener un paquete por su codigo, obtener un l
 
 ##Ejecucion: 
 El programa cuenta con una clase main ya pre-cargada para probar todos los servicios disponibles. Para que se cargue correctamente cuenta con dos archivos .csv, "camiones.csv" y "paquetes.csv" que contienen datos iniciales.
+Ejecutar en terminal:
+para que compile:
+javac -cp "lib/*" -d bin src/*.java
+para que ejecute:
+java -cp "bin;lib/*" Main
 
 ##Dependencias: 
 para la lectura de los archivos csv se uso Opencsv, se necesitan las siguientes dependencias:
