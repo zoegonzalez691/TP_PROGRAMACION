@@ -8,9 +8,10 @@ public class Backtracking {
     private double  pesoNoAsignadoActual;
     
     /*en mi algoritmo de Backtracking opte por hacer un recorrido total buscando encontrar 
-    la mejor solucion(la que tenga menor peso no asignado), mi caso base seria cuando llego al fin de mis paquetes 
-    y mi caso de poda lo implemente parsa que cuando ya vaya sumando mas de peso no asignado que lo que 
-    tengo en la mejor solucion ya no siga intentando por ahi porque no va a ser mejor que la mejor hasta el momento */
+    la mejor solucion(la que tenga menor peso no asignado), mi caso base seria cuando llego al fin de mis paquetes, 
+    evaluando si la solucion que encontre es mejor o no, y mi caso de poda lo implemente para que cuando ya 
+    vaya sumando mas de peso no asignado que lo que tengo en la mejor solucion ya no siga intentando 
+    por ahi porque no va a ser mejor que la mejor hasta el momento */
     
     public Backtracking(List<Camion> cam, List<Paquete> paq){
         this.camiones= cam;

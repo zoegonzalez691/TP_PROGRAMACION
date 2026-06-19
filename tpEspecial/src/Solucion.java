@@ -5,10 +5,13 @@ import java.util.List;
 import java.util.Map;
 
 
-/*Se desea establecer una asignación de todos los paquetes a los camiones disponibles con el objetivo de minimizar el peso total de los paquetes que no pudieron ser asignados a ningún camión.
+/*Se desea establecer una asignación de todos los paquetes a los camiones disponibles con el objetivo de 
+minimizar el peso total de los paquetes que no pudieron ser asignados a ningún camión.
 Se sabe que existen ciertas restricciones para asignar un paquete a un camión:
-• Primero, ningún camión podrá superar su capacidad máxima de carga. La capacidad de cada camión está definida en el archivo de entrada.
+• Primero, ningún camión podrá superar su capacidad máxima de carga. La capacidad de cada camión está 
+definida en el archivo de entrada.
 • Segundo, los paquetes que contienen alimentos sólo podrán ser asignados a camiones refrigerados. */
+
 public class Solucion {
 
     private Map<Camion, List<Paquete>> asignados;

@@ -34,7 +34,6 @@ public class Servicios {
             CsvToBean<Camion> csvToBean = new CsvToBeanBuilder<Camion>(br)
                     .withType(Camion.class)
                     .withSeparator(';')
-                    .withSkipLines(1) 
                     .withIgnoreLeadingWhiteSpace(true)
                     .build();
             this.camiones = csvToBean.parse();
@@ -49,7 +48,6 @@ public class Servicios {
             CsvToBean<Paquete> csvToBean = new CsvToBeanBuilder<Paquete>(br)
                     .withType(Paquete.class)
                     .withSeparator(';')
-                    .withSkipLines(1) 
                     .withIgnoreLeadingWhiteSpace(true)
                     .build();
             
@@ -88,22 +86,26 @@ public class Servicios {
     
     //O(n) donde n son la cantidad de paquetes que tengo en el grafo
     public List<Paquete> servicio3(int urgenciaMinima, int urgenciaMaxima){
-          //crear la lista resultado
           List<Paquete> resultado= new ArrayList<Paquete>(); 
-          //recorrer los paquetes
           for(Paquete p: grafoPaquetes.values()){
-            //si mi paquete esta dentro del rango
-            if((p.getNivelUrgencia()<= urgenciaMaxima)||
+            if((p.getNivelUrgencia()<= urgenciaMaxima)&&
                 (p.getNivelUrgencia()>=urgenciaMinima)){
-                    resultado.add(p);  //lo agrego al resultado
+                    resultado.add(p); 
 
             }
-          }//retorno la lista resultado
+          }
           return resultado;
     }
-    //O(1) un solo acceso para mostrar mi lista de camiones
+
     public List<Camion> getCamiones() {
        return camiones;
+    }
+     
+    public List<Paquete> getPaquetes(){
+        List<Paquete> paqLista= new ArrayList<>();
+        paqLista.addAll(grafoPaquetes.values());
+
+        return paqLista;
     }
     
 }

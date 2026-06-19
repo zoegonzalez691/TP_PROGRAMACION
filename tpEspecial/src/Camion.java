@@ -47,4 +47,12 @@ public class Camion {
     public int hashCode() {
         return idCamion.hashCode();
     }
+
+    @Override
+    public String toString(){
+        return "Camion{" + "id= " +idCamion + '\'' +
+                 ", patente=" + '\'' +
+                ", esta refrigerado= " + estaRefrigerado+
+                ", capacidad= " +capacidadKg+ "}";
+    }
 }

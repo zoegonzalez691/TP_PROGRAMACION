@@ -56,5 +56,13 @@ public class Paquete{
     public int hashCode() {
        return idPaquete.hashCode();
     }
+    @Override
+    public String toString() {
+        return "Paquete{" + "id='" + idPaquete + '\'' +
+                ", codigo='" + codigoPaquete + '\'' +
+                ", peso=" + pesoKg +
+                ", alimentos=" + contieneAlimentos +
+                ", urgencia=" + nivelUrgencia + "}";
+    }
  
 }
